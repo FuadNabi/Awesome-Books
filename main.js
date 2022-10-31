@@ -48,3 +48,18 @@ function showBooks() {
 
 showBooks();
 bookForm.addEventListener('submit', addBook);
+function removeBook(index) {
+  if (localStorage.getItem('Books')) {
+    const books = JSON.parse(localStorage.getItem('Books'));
+    books.splice(index, 1);
+    localStorage.clear();
+    localStorage.setItem('Books', JSON.stringify(books));
+  }
+}
+
+collection.querySelectorAll('.remove-btn').forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    removeBook(index);
+    btn.parentElement.parentElement.remove();
+  });
+});
