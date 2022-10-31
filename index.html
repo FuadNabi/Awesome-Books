@@ -18,17 +18,21 @@
     <main>
       <div class="main-cont">
         <table class="books-table">
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-          </tr>
-          <tr>
-            <td></td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Author</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody class="collection">
+          </tbody>
         </table>
-        <form>
-          <input type="text" required placeholder="Title">
-          <input type="text" required placeholder="Author">
+        <form class="book-form">
+          <ul>
+            <li><input type="text" name="author" id="author" required placeholder="Title"></li>
+            <li><input type="text" name="title" id="title" required placeholder="Author"></li>
+            <li><button type="submit" class="book-add-btn">Add</button></li>
+          </ul>
         </form>
       </div>
     </main>
