@@ -1,65 +1,75 @@
-const bookForm = document.querySelector('.book-form');
-const collection = document.querySelector('.collection');
+ class Books {
+  constructor(title, author){
+   this.title = title;
+   this.author = author;
+  }
+ getBookDetails() {
+  return {
+    title: this.title,
+    author: this.author
+  }
+ }
 
-function addNewBookData() {
-  const bookTitle = bookForm.title.value;
-  const bookAuthor = bookForm.author.value;
-
-  const book = {
-    title: bookTitle,
-    author: bookAuthor,
-  };
-
-  return book;
 }
+class Data {
+  static #books = [];
 
-function saveBooks(book) {
-  let books = [];
-
-  if (localStorage.getItem('Books')) {
-    books = JSON.parse(localStorage.getItem('Books'));
+  static #checkData() {
+    return localStorage.getItem('Books');
   }
 
-  books.push(book);
-  localStorage.setItem('Books', JSON.stringify(books));
+  static getData() {
+    if(Data.#checkData()) {
+      Data.#books = JSON.parse(localStorage.getItem('Books'))
+    }
+    return Data.#books;
+  }
+
+  static #saveData(book){
+    if(Data.#checkData()) {
+      Data.#books = JSON.parse(localStorage.getItem('Books'))
+    }
+    Data.#books.push(book);
+    Data.#books = JSON.parse(localStorage.getItem('Books'))
+  }
+
+  static #removeData(index){
+    if(Data.#checkData()){
+      let books =Data.#checkData;
+      books = books.filter((book) => books.indexOf(book) != index);
+      localStorage.clear();
+      Data.#books = JSON.parse(localStorage.getItem('Books'));
+    }
+  }
+
 }
 
-function addBook(element) {
-  element.preventDefault();
-  saveBooks(addNewBookData());
-  bookForm.submit();
-}
-
-function showBooks() {
-  if (localStorage.getItem('Books')) {
-    const books = JSON.parse(localStorage.getItem('Books'));
-    books.forEach((book) => {
-      const booksHtml = `
+class BookMain {
+  static #booksHtml(book) {
+    const booksHtml = `
         <tr class="book-info">
           <td class="title">${book.title}</td>
           <td class="author">${book.author}</td>
           <td><button class="remove-btn">Remove</button></td>
         </tr>
       `;
-      collection.innerHTML += booksHtml;
-    });
+    return booksHtml; 
   }
+
+  static showBook(container, book) {
+     container.innerHtml += BookMain.#booksHtml(book);
+  }
+
+  static removeBook(btn) {
+     btn.parentElement.parentElement.remove();
+  }
+
+  static showBooks(container){
+   Data.getData.forEach((book) => { 
+     BookMain.showBook(container, book);
+   });
+  }
+  
+
 }
 
-showBooks();
-bookForm.addEventListener('submit', addBook);
-function removeBook(index) {
-  if (localStorage.getItem('Books')) {
-    const books = JSON.parse(localStorage.getItem('Books'));
-    books.splice(index, 1);
-    localStorage.clear();
-    localStorage.setItem('Books', JSON.stringify(books));
-  }
-}
-
-collection.querySelectorAll('.remove-btn').forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    removeBook(index);
-    btn.parentElement.parentElement.remove();
-  });
-});
