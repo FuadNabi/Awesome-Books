@@ -18,7 +18,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- git clone git@github.com:FuadNabi/Awesome-Books.git
+- git clone `git@github.com:FuadNabi/Awesome-Books.git`
 
 - cd Awesome-Books
 
