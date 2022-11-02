@@ -5,43 +5,69 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <title>Awesome books</title>
 </head>
 <body>
   <div class="app-cont">
     <header>
       <div class="header-cont">
-        <section class="p-3">
-          <div class="container">
-            <h1 class="text-center header-title">Awesome books</h1>
-            <table class="table table-striped border my-4 mx-auto">
-              <thead>
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Author</th>
-                </tr>
-              </thead>
-              <tbody class="collections"></tbody>
-            </table>
+        <nav>
+          <div class="nav-cont">
+            <h1 class="header-title"><a href="index.html">Awesome books</a></h1>
+            <div class="nav-links">
+              <ul>
+                <li class="nav-link"><a href="">Books List</a></li>
+                <li class="nav-link"><a href="">Add Book</a></li>
+                <li class="nav-link"><a href="">Contact</a></li>
+              </ul>
+            </div>
           </div>
-        </section>
-        <section class="p-3">
-          <div class="container text-center">
-            <h2>Add a new book</h2>
-            <form class="mx-auto my-4">
-              <form class="book-form">
-                <ul class="list-unstyled">
-                  <li><input type="text" name="author" id="author" required placeholder="Title"></li>
-                  <li><input type="text" name="title" id="title" required placeholder="Author"></li>
-                  <button type="submit" name="add" id="add" class="add btn btn-outline-dark mt-3">Add</button>           
-                </ul>
-              </form>
-            </form>
-          </div>
-        </section>
+        </nav>
       </div>
     </header>
+    <main>
+      <section class="table-cont display-none">
+        <table class="table" cellspacing = "0">
+          <thead>
+            <tr>
+              <th class="table-title">Title</th>
+              <th class="table-title">Author</th>
+              <th class="table-title">Remove Book</th>
+            </tr>
+          </thead>
+          <tbody class="collections"></tbody>
+        </table>
+      </section>
+      <section class="form-cont display-none">
+        <div class="container form-cont-div">
+          <h2 class="form-title">Add a new book</h2>
+          <form class="book-form">
+            <ul class="form-ul">
+              <li><input class="form-input" type="text" name="author" id="author" required placeholder="Title"></li>
+              <li><input class="form-input" type="text" name="title" id="title" required placeholder="Author"></li>
+              <button type="submit" name="add" id="add" class="add btn">Add</button>           
+            </ul>
+          </form>
+        </div>
+      </section>
+      <section class="contact-cont">
+        <div class="contact">
+          <h2 class="contact-title">Contact Information</h2>
+          <p class="contact-p">Do have any questions or you just want to say "Hello"?<br> You can reach out to us!</p>
+          <ul>
+            <li>Our e-mail: mail@mail.ru</li>
+            <li>Out phone number: +0123456789</li>
+            <li>Our address: Lorem 11, 4134 Ipsum, Lorem Ipsum</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-cont">
+        <h2 class="footer-h2">Awesome books</h2>
+        <p class="footer-p">© Awesome Books All rights reserved.</p>
+      </div>
+    </footer>
   </div>
   <script src="main.js"></script>
 </body>
