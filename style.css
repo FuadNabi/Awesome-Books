@@ -146,7 +146,7 @@ footer {
   width: 40%;
 }
 
-.display-none {
+.page {
   display: none;
 }
 
@@ -171,3 +171,8 @@ footer {
   align-items: center;
   margin-top: 4em;
 }
+
+.current {
+ display: flex;
+}
+ 

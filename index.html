@@ -16,9 +16,9 @@
             <h1 class="header-title"><a href="index.html">Awesome books</a></h1>
             <div class="nav-links">
               <ul>
-                <li class="nav-link"><a href="">Books List</a></li>
-                <li class="nav-link"><a href="">Add Book</a></li>
-                <li class="nav-link"><a href="">Contact</a></li>
+                <li class="nav-link active"><a href="#list" data-trigger="list" aria-current="page">Books List</a></li>
+                <li class="nav-link"><a href="#add-book" data-trigger="add-book" aria-current="page">Add Book</a></li>
+                <li class="nav-link"><a href="#contact" data-trigger="contact" aria-current="page">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -26,7 +26,7 @@
       </div>
     </header>
     <main>
-      <section class="table-cont display-none">
+      <section class="table-cont page current" id="list">
         <table class="table" cellspacing = "0">
           <thead>
             <tr>
@@ -38,7 +38,7 @@
           <tbody class="collections"></tbody>
         </table>
       </section>
-      <section class="form-cont display-none">
+      <section class="form-cont page" id="add-book">
         <div class="container form-cont-div">
           <h2 class="form-title">Add a new book</h2>
           <form class="book-form">
@@ -50,7 +50,7 @@
           </form>
         </div>
       </section>
-      <section class="contact-cont">
+      <section class="contact-cont page" id="contact">
         <div class="contact">
           <h2 class="contact-title">Contact Information</h2>
           <p class="contact-p">Do have any questions or you just want to say "Hello"?<br> You can reach out to us!</p>
