@@ -123,18 +123,19 @@ document.addEventListener(
   },
 );
 
- 
 const item = document.querySelectorAll('.nav-link');
-item.forEach((element) => {
-  element.addEventListener('click', () =>{
-    const page = document.querySelector(`#${element.getAttribute('data-trigger')}`);
+item.forEach((link) => {
+  link.addEventListener('click', () => {
+    const page = document.querySelector(
+      `#${link.getAttribute('data-trigger')}`,
+    );
 
     document.querySelector('.active').classList.remove('active');
-    element.classList.add('active');
-    document.querySelector('.current').classList.remove('current');
-    page.classList.add('current');
-    
 
-  }); 
+    link.classList.add('active');
+
+    document.querySelector('.current').classList.remove('current');
+
+    page.classList.add('current');
+  });
 });
- 

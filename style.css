@@ -32,15 +32,15 @@ body {
   margin: 0;
 }
 
-.nav-link {
+.nav-ul {
   margin-left: 3em;
 }
 
-.nav-link > a:hover {
+.nav-ul > a:hover {
   color: red;
 }
 
-.nav-link a {
+.nav-link {
   color: rgb(78, 74, 74);
   text-decoration: none;
   transition: 0.5s;
@@ -146,10 +146,6 @@ footer {
   width: 40%;
 }
 
-.page {
-  display: none;
-}
-
 .add {
   width: 20%;
   align-self: flex-end;
@@ -172,7 +168,14 @@ footer {
   margin-top: 4em;
 }
 
+.page {
+  display: none;
+}
+
 .current {
  display: flex;
 }
- 
+
+.active {
+  color: red;
+}
