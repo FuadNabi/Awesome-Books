@@ -1,3 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Playfair+Display&family=Poppins:wght@200;300;400;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.header-title a {
+  color: rgb(78, 74, 74);
+  text-decoration: none;
+}
+
+.nav-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px rgba(59, 59, 59, 0.432) solid;
+  background-color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-ul {
+  margin-left: 3em;
+}
+
+.nav-ul > a:hover {
+  color: red;
+}
+
+.nav-link {
+  color: rgb(78, 74, 74);
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 10px 0;
+}
+
 .border-red {
   border: 2px red solid;
+}
+
+.display-none {
+  display: none;
+}
+
+.table-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 7em;
+}
+
+.table-title {
+  font-size: 28px;
+  width: 25%;
+  padding: 0;
+}
+
+.table tbody tr td {
+  padding: 5px 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.remove {
+  background-color: white;
+  font-size: 18px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px rgba(59, 59, 59, 0.432) solid;
+  background-color: white;
+}
+
+.footer-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-cont-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.form-title {
+  font-size: 32px;
+}
+
+.form-ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-input {
+  width: 98%;
+  padding: 10px 5px;
+  margin: 0 0 20px 0;
+  border-radius: 6px;
+}
+
+.book-form {
+  width: 40%;
+}
+
+.add {
+  width: 20%;
+  align-self: flex-end;
+  background-color: white;
+  transition: 0.3s;
+  padding: 8px 30px;
+  font-size: 18px;
+}
+
+.add:hover {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.background-img {
+  position: absolute;
+  top: 9%;
+  left: 0;
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100%;
+  height: 90%;
+}
+
+.page {
+  display: none;
+}
+
+.current {
+  display: flex;
+}
+
+.active {
+  color: red;
 }

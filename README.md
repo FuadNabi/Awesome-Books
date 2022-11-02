@@ -1,12 +1,15 @@
 # Awosome books
 
 > This is just a simple project under the supervision of the Microverse platform that tests how descriptive our repo instruction (pull requests description, readme file, html & css and javascirpt)
+
+![screenshot](Capture.JPG)
+
+
 ## Built With
 
 - HTML
 - CSS
-- bootstrap
-- javascript
+- JavaScript
 
 ## Getting Started
 
