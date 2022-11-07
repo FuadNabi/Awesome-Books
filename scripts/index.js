@@ -11,7 +11,7 @@ const time = () => {
   DateNow.innerHTML = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 };
 
-setInterval(time, 1000);
+setInterval(time, 10);
 
 Base.addBook(bookForm, collections);
 Base.displayBook(collections);
