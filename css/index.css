@@ -189,3 +189,12 @@ footer {
 .active {
   color: red;
 }
+
+.date {
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: 20px;
+}

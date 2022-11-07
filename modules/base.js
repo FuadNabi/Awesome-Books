@@ -51,4 +51,8 @@ const singlePageApp = (item) => {
   });
 };
 
-export default { addBook, displayBook, singlePageApp };
+export {
+  addBook,
+  displayBook,
+  singlePageApp,
+};
